@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LumiCare — учебный интернет-магазин натуральных средств ухода за волосами и кожей лица.">
+  <meta name="keywords" content="натуральная косметика, уход за волосами, уход за лицом, LumiCare, интернет-магазин">
+  <meta name="author" content="Симакова Юлия Владиславовна">
+  <meta property="og:title" content="LumiCare — натуральный уход за волосами и кожей">
+  <meta property="og:description" content="Подберите бережный уход для волос и кожи лица в интернет-магазине LumiCare.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=80">
+  <meta name="theme-color" content="#f8f2e9">
+  <title>LumiCare — натуральный уход за волосами и кожей</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%236f8f72'/%3E%3Cpath d='M18 45V18h7v20h20v7z' fill='white'/%3E%3Cpath d='M39 15c8 2 10 8 7 15-7 0-12-4-12-10 2 4 5 6 9 7-3-3-5-7-4-12z' fill='%23f6dadd'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="LumiCare — на главную">
+        <span class="logo-mark" aria-hidden="true">L</span>
+        <span>LumiCare</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Открыть меню" aria-controls="mainNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Основная навигация">
+        <a href="#home">Главная</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#care-selection">Подбор ухода</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <button class="cart-button" id="cartOpenButton" type="button" aria-label="Открыть корзину, товаров: 0">
+        <span aria-hidden="true">🛍</span>
+        <span class="cart-button-text">Корзина</span>
+        <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow">Бережная забота каждый день</span>
+          <h1>Натуральный уход, который раскрывает вашу красоту</h1>
+          <p class="hero-lead">Средства для волос и кожи с понятными составами, мягкими формулами и компонентами природного происхождения.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#catalog">Перейти в каталог</a>
+            <a class="button button-secondary" href="#care-selection">Подобрать уход</a>
+          </div>
+          <ul class="hero-benefits" aria-label="Ключевые преимущества">
+            <li><span aria-hidden="true">🌿</span> Натуральные компоненты</li>
+            <li><span aria-hidden="true">✓</span> Проверенное качество</li>
+            <li><span aria-hidden="true">🚚</span> Быстрая доставка</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Косметические средства LumiCare">
+          <span class="hero-blob hero-blob-one" aria-hidden="true"></span>
+          <span class="hero-blob hero-blob-two" aria-hidden="true"></span>
+          <div class="product-display">
+            <div class="display-bottle display-bottle-tall"><span>LUMI</span><small>HAIR CARE</small></div>
+            <div class="display-jar"><span>LUMI</span><small>FACE CREAM</small></div>
+            <div class="display-bottle display-bottle-small"><span>LUMI</span><small>SERUM</small></div>
+          </div>
+          <span class="floating-label">до 98% компонентов<br>природного происхождения</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="catalog">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow">Выберите своё средство</span><h2>Каталог ухода</h2></div>
+          <p>Формулы для ежедневного очищения, увлажнения, защиты и восстановления.</p>
+        </div>
+
+        <div class="catalog-toolbar reveal">
+          <div class="filter-buttons" id="filterButtons" aria-label="Фильтр каталога">
+            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">Все товары</button>
+            <button class="filter-button" type="button" data-filter="hair" aria-pressed="false">Для волос</button>
+            <button class="filter-button" type="button" data-filter="face" aria-pressed="false">Для лица</button>
+            <button class="filter-button" type="button" data-filter="cleansing" aria-pressed="false">Очищение</button>
+            <button class="filter-button" type="button" data-filter="moisturizing" aria-pressed="false">Увлажнение</button>
+          </div>
+          <label class="search-field" for="productSearch">
+            <span class="visually-hidden">Поиск товара по названию</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="productSearch" type="search" placeholder="Найти средство" maxlength="60" autocomplete="off">
+          </label>
+        </div>
+
+        <p class="catalog-status" id="catalogStatus" role="status"></p>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="advantages">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <div><span class="eyebrow">Почему LumiCare</span><h2>Красота с заботой о вас и природе</h2></div>
+          <p>Мы отбираем продукцию, которой можно доверить ежедневный уход.</p>
+        </div>
+        <div class="advantages-grid">
+          <article class="feature-card reveal"><span class="feature-icon" aria-hidden="true">🌱</span><h3>Натуральные компоненты</h3><p>Растительные масла, экстракты и мягкие активные ингредиенты.</p></article>
+          <article class="feature-card reveal"><span class="feature-icon" aria-hidden="true">🐇</span><h3>Без тестов на животных</h3><p>Поддерживаем этичный подход к созданию косметики.</p></article>
+          <article class="feature-card reveal"><span class="feature-icon" aria-hidden="true">✓</span><h3>Сертифицировано</h3><p>Проверяем документы, качество и безопасность продукции.</p></article>
+          <article class="feature-card reveal"><span class="feature-icon" aria-hidden="true">♻</span><h3>Экологичная упаковка</h3><p>Выбираем перерабатываемые материалы и разумный объём упаковки.</p></article>
+          <article class="feature-card reveal"><span class="feature-icon" aria-hidden="true">♡</span><h3>Помощь в подборе</h3><p>Подскажем базовую схему ухода с учётом ваших особенностей.</p></article>
+          <article class="feature-card reveal"><span class="feature-icon" aria-hidden="true">⌂</span><h3>Доставка по России</h3><p>Бережно упаковываем и отправляем заказы в разные регионы.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="care-selection">
+      <div class="container selection-grid">
+        <div class="selection-copy reveal">
+          <span class="eyebrow">Персональный помощник</span>
+          <h2>Подберём уход за три шага</h2>
+          <p>Ответьте на несколько вопросов — и получите базовую рекомендацию. Подбор носит информационный характер и не заменяет консультацию специалиста.</p>
+          <ol class="selection-steps">
+            <li><span>1</span> Выберите направление</li>
+            <li><span>2</span> Укажите свой тип</li>
+            <li><span>3</span> Отметьте основную задачу</li>
+          </ol>
+        </div>
+
+        <form class="care-form reveal" id="careForm" novalidate>
+          <div class="form-group">
+            <label for="careDirection">Направление ухода *</label>
+            <select id="careDirection" name="direction" required aria-describedby="directionError">
+              <option value="">Выберите направление</option>
+              <option value="hair">Волосы</option>
+              <option value="face">Кожа лица</option>
+            </select>
+            <small class="field-error" id="directionError"></small>
+          </div>
+          <div class="form-group">
+            <label for="careType">Тип волос или кожи *</label>
+            <select id="careType" name="type" required disabled aria-describedby="typeError">
+              <option value="">Сначала выберите направление</option>
+            </select>
+            <small class="field-error" id="typeError"></small>
+          </div>
+          <div class="form-group">
+            <label for="careProblem">Основная проблема *</label>
+            <select id="careProblem" name="problem" required disabled aria-describedby="problemError">
+              <option value="">Сначала выберите направление</option>
+            </select>
+            <small class="field-error" id="problemError"></small>
+          </div>
+          <button class="button button-primary button-full" type="submit">Получить рекомендацию</button>
+          <div class="recommendation" id="careResult" role="status" tabindex="-1" hidden></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="categories">
+      <div class="container">
+        <div class="section-heading reveal"><div><span class="eyebrow">Быстрый выбор</span><h2>Популярные категории</h2></div><p>Найдите нужный этап ухода в один клик.</p></div>
+        <div class="category-grid">
+          <button class="category-card reveal" type="button" data-category="hair"><span aria-hidden="true">〰</span><strong>Уход за волосами</strong><small>4 средства</small></button>
+          <button class="category-card reveal" type="button" data-category="face"><span aria-hidden="true">◯</span><strong>Уход за лицом</strong><small>4 средства</small></button>
+          <button class="category-card reveal" type="button" data-category="cleansing"><span aria-hidden="true">✦</span><strong>Очищение</strong><small>2 средства</small></button>
+          <button class="category-card reveal" type="button" data-category="moisturizing"><span aria-hidden="true">◇</span><strong>Увлажнение</strong><small>4 средства</small></button>
+          <button class="category-card reveal" type="button" data-category="restoration"><span aria-hidden="true">↻</span><strong>Восстановление</strong><small>3 средства</small></button>
+          <button class="category-card reveal" type="button" data-category="protection"><span aria-hidden="true">☼</span><strong>Защита</strong><small>2 средства</small></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-heading centered reveal"><div><span class="eyebrow">Нас рекомендуют</span><h2>Отзывы покупателей</h2></div><p>Впечатления клиентов после знакомства с LumiCare.</p></div>
+        <div class="reviews-grid">
+          <article class="review-card reveal"><div class="review-top"><span class="avatar" aria-hidden="true">АК</span><div><h3>Анна Крылова</h3><span class="stars" aria-label="Оценка 5 из 5">★★★★★</span></div></div><p>Шампунь очень мягкий, а волосы после маски выглядят ухоженными и легко расчёсываются. Понравилась аккуратная упаковка.</p></article>
+          <article class="review-card reveal"><div class="review-top"><span class="avatar" aria-hidden="true">МС</span><div><h3>Мария Соколова</h3><span class="stars" aria-label="Оценка 5 из 5">★★★★★</span></div></div><p>Сервис подбора предложил понятную схему. Увлажняющая сыворотка быстро впитывается, не оставляя липкости.</p></article>
+          <article class="review-card reveal"><div class="review-top"><span class="avatar" aria-hidden="true">ЕВ</span><div><h3>Елена Волкова</h3><span class="stars" aria-label="Оценка 4 из 5">★★★★☆</span></div></div><p>Заказ приехал быстро, всё было хорошо защищено. Крем комфортный и подходит для ежедневного ухода.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-intro reveal"><span class="eyebrow">Полезная информация</span><h2>Частые вопросы</h2><p>Собрали ответы об ассортименте, доставке и использовании средств.</p></div>
+        <div class="faq-list reveal">
+          <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false"><span>Как подобрать средство для своего типа кожи?</span><span class="faq-sign" aria-hidden="true">+</span></button></h3><div class="faq-answer" hidden><p>Воспользуйтесь формой подбора на сайте или напишите нам. Перед первым применением рекомендуем тест на небольшом участке кожи.</p></div></article>
+          <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false"><span>Подходит ли продукция для чувствительной кожи?</span><span class="faq-sign" aria-hidden="true">+</span></button></h3><div class="faq-answer" hidden><p>В каталоге есть мягкие формулы, однако индивидуальная реакция возможна. Изучите состав и при необходимости проконсультируйтесь со специалистом.</p></div></article>
+          <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false"><span>Как осуществляется доставка?</span><span class="faq-sign" aria-hidden="true">+</span></button></h3><div class="faq-answer" hidden><p>Учебная версия демонстрирует оформление заказа. В реальном магазине были бы доступны курьерская доставка и пункты выдачи по России.</p></div></article>
+          <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false"><span>Тестируется ли косметика на животных?</span><span class="faq-sign" aria-hidden="true">+</span></button></h3><div class="faq-answer" hidden><p>Нет. Для ассортимента LumiCare выбираются бренды, придерживающиеся этичного подхода и не тестирующие готовую продукцию на животных.</p></div></article>
+          <article class="faq-item"><h3><button class="faq-question" type="button" aria-expanded="false"><span>Как хранить средства после открытия?</span><span class="faq-sign" aria-hidden="true">+</span></button></h3><div class="faq-answer" hidden><p>Храните упаковку плотно закрытой, вдали от прямого солнца и источников тепла. Точные условия и срок после открытия указаны на этикетке.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <span class="eyebrow">Будем на связи</span><h2>Контакты</h2>
+          <p>Задайте вопрос об ассортименте, подборе средств или демонстрационном заказе.</p>
+          <address>
+            <a href="tel:+74951234567"><span aria-hidden="true">☎</span><span><small>Телефон</small>+7 (495) 123-45-67</span></a>
+            <a href="mailto:hello@lumicare.example"><span aria-hidden="true">✉</span><span><small>Электронная почта</small>hello@lumicare.example</span></a>
+            <div><span aria-hidden="true">◷</span><span><small>Режим работы</small>Пн–Сб, 09:00–20:00</span></div>
+            <div><span aria-hidden="true">⌖</span><span><small>Адрес</small>г. Москва, ул. Цветочная, д. 11</span></div>
+          </address>
+          <div class="social-links" aria-label="Социальные сети">
+            <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" aria-label="LumiCare во ВКонтакте">VK</a>
+            <a href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="LumiCare в Telegram">TG</a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="LumiCare на YouTube">YT</a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <h3>Напишите нам</h3>
+          <div class="form-row">
+            <div class="form-group"><label for="contactName">Имя *</label><input id="contactName" name="name" type="text" autocomplete="name" maxlength="50" required><small class="field-error"></small></div>
+            <div class="form-group"><label for="contactEmail">Электронная почта *</label><input id="contactEmail" name="email" type="email" autocomplete="email" maxlength="100" required><small class="field-error"></small></div>
+          </div>
+          <div class="form-group"><label for="contactPhone">Телефон</label><input id="contactPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="+7 (___) ___-__-__"><small class="field-error"></small></div>
+          <div class="form-group"><label for="contactMessage">Сообщение *</label><textarea id="contactMessage" name="message" rows="5" maxlength="500" required></textarea><small class="field-error"></small></div>
+          <label class="consent"><input type="checkbox" id="contactConsent" required><span>Я согласен(на) на обработку данных в рамках учебной демонстрации *</span></label>
+          <small class="field-error" id="consentError"></small>
+          <button class="button button-primary" type="submit">Отправить сообщение</button>
+          <p class="form-note">Поля, отмеченные *, обязательны для заполнения.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="logo footer-logo" href="#home"><span class="logo-mark" aria-hidden="true">L</span><span>LumiCare</span></a><p>Натуральный и осознанный уход за волосами и кожей на каждый день.</p></div>
+      <div><h2>Навигация</h2><a href="#catalog">Каталог</a><a href="#advantages">Преимущества</a><a href="#care-selection">Подбор ухода</a><a href="#reviews">Отзывы</a></div>
+      <div><h2>Информация</h2><button class="footer-link" type="button" data-info="privacy">Политика конфиденциальности</button><button class="footer-link" type="button" data-info="terms">Пользовательское соглашение</button><a href="#faq">Вопросы и ответы</a><a href="#contacts">Контакты</a></div>
+    </div>
+    <div class="container footer-bottom"><p>© <span id="currentYear">2026</span> LumiCare</p><p>Учебный проект. Симакова Юлия Владиславовна, 2026</p></div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Наверх" title="Наверх">↑</button>
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="modal" id="cartModal" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+    <div class="modal-backdrop" data-close-modal="cart"></div>
+    <div class="modal-panel cart-panel" tabindex="-1">
+      <div class="modal-header"><div><span class="eyebrow">Ваш выбор</span><h2 id="cartTitle">Корзина</h2></div><button class="icon-button" type="button" data-close-modal="cart" aria-label="Закрыть корзину">×</button></div>
+      <div class="cart-content" id="cartContent"></div>
+      <div class="cart-summary" id="cartSummary">
+        <div><span>Итого</span><strong id="cartTotal">0 ₽</strong></div>
+        <div class="cart-actions"><button class="button button-ghost" id="clearCartButton" type="button">Очистить</button><button class="button button-primary" id="checkoutButton" type="button">Оформить заказ</button></div>
+      </div>
+      <form class="checkout-form" id="checkoutForm" novalidate hidden>
+        <h3>Данные для демонстрационного заказа</h3>
+        <div class="form-group"><label for="orderName">Имя *</label><input id="orderName" name="name" type="text" autocomplete="name" maxlength="50" required><small class="field-error"></small></div>
+        <div class="form-group"><label for="orderPhone">Телефон *</label><input id="orderPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" required placeholder="+7 (___) ___-__-__"><small class="field-error"></small></div>
+        <div class="form-group"><label for="orderEmail">Электронная почта *</label><input id="orderEmail" name="email" type="email" autocomplete="email" maxlength="100" required><small class="field-error"></small></div>
+        <div class="checkout-actions"><button class="button button-ghost" id="backToCartButton" type="button">Назад</button><button class="button button-primary" type="submit">Подтвердить заказ</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoTitle" hidden>
+    <div class="modal-backdrop" data-close-modal="info"></div>
+    <div class="modal-panel info-panel" tabindex="-1">
+      <div class="modal-header"><h2 id="infoTitle">Информация</h2><button class="icon-button" type="button" data-close-modal="info" aria-label="Закрыть окно">×</button></div>
+      <div id="infoContent"></div>
+    </div>
+  </div>
+</body>
+</html>
